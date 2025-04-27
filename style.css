@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica, sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --heading : #000;
+    --text-color : rgb(255, 81, 0);
+    --button-color : rgb(255, 115, 0);
+    --button-hover : orange;
+}
+
+
+/* =========================================================================================================================== */
+/* --------------------------------------------  UTILITY CLASSES STYLING START -------------------------------------------- */
+.flex{
+    display: flex;
+}
+.container{
+    max-width: 85%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+/* --------------------------------------------  UTILITY CLASSES STYLING END ---------------------------------------------- */
+/* =========================================================================================================================== */
+
+
+/* =========================================================================================================================== */
+/* --------------------------------------------  PRODUCTS SECTION STYLING START -------------------------------------------- */
+.products{
+    width: 100%;
+    height: 95vh;
+    background: rgb(255, 232, 188);
+}
+.products .container > h2{
+    color : var(--heading);
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+.products .container > p{
+    color : var(--text-color);
+    font-size: 1rem;
+    font-style: italic;
+}
+.product-card-container{
+    width: 100%;
+    /* background-color: aqua; */
+    margin-top: 2.5rem;
+    justify-content: space-between;
+    gap : 1%;
+}
+.product-card{
+    flex-basis: 24%;
+    max-width: 24%;
+    height: 15rem;
+    border-radius: 0.5rem;
+    flex-direction: column;
+    box-shadow:
+    1px 1px 0 rgba(0, 0, 0, 0.15),
+    2px 2px 0 rgba(0, 0, 0, 0.1),
+    3px 3px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    transition: all 0.3s 0.05s;
+}
+.product-card:hover{
+    transform: translateY(-0.5rem);
+}
+.image {
+    height: 50%;
+    border-radius: 0.5rem;
+    box-shadow : 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom right,rgb(255, 196, 68), rgb(255, 176, 112));
+    padding: 0.5rem 0.6rem;
+}
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.description{
+    height: 50%;
+    padding: 0.6rem 0.6rem;
+}
+.title{
+    width: 100%;
+}
+.title > h2{
+    color : var(--heading);
+    font-size: 1.5rem;
+    margin-bottom: 0.7rem;
+}
+.title > p{
+    color : var(--text-color);
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn-section{
+    width: 100%;
+    display: flex;
+    gap : 1rem;
+    margin-top: 1.5rem;
+}
+.btn-section button{
+    
+    flex-basis: 45%;
+    font-size: 0.9rem;
+    padding: 0.25rem 0.4rem;
+    transition: all 0.3s 0.05s;
+    cursor: pointer;
+    margin-top: -0.5rem;
+}
+.add-cart-btn{
+    background-color: var(--button-color);
+    color : #fff;
+    border: none;
+    outline: none;
+}
+.add-cart-btn:hover{
+    background-color: var(--button-hover);
+}
+.view-more-btn{
+    border: 1px solid var(--button-color);
+    color : var(--button-color);
+    background-color: rgb(255, 241, 215);
+}
+.view-more-btn:hover{
+    background-color: orange;
+    color : rgb(255, 241, 215);
+}
+/* --------------------------------------------  PRODUCTS SECTION STYLING END ---------------------------------------------- */
+/* =========================================================================================================================== */
+
+
+/* =========================================================================================================================== */
+/* --------------------------------------------  RESPONSIVE (FOR MOBILE ONLY) STYLING START -------------------------------------------- */
+@media screen and (max-width : 500px){
+    .products{
+        width: 100%;
+        height : auto;
+    }
+    .product-card-container{
+        flex-direction: column;
+        gap : 1rem;
+    }
+    .product-card{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    .image{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image img{
+        width: 80%;
+    }
+    .description{
+        height: 50%;
+        padding: 1rem;
+    }
+    .btn-section button{
+        padding: 0.5rem auto;
+        font-size: 1.5rem;
+    }
+}
+/* --------------------------------------------  RESPONSIVE (FOR MOBILE ONLY) STYLING END ---------------------------------------------- */
+/* =========================================================================================================================== */
